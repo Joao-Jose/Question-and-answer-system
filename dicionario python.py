@@ -1,4 +1,3 @@
-print('=*'* 50 + '=*')
 question = {
     'Pergunta 1': {
             'pergunta': 'Qual item arremessável é necessario para cegar um monstro ? ',
@@ -19,8 +18,7 @@ question = {
         'resposta_certa': 'c',
     },
 }
-print()
-
+print('=*'* 50 + '=*')
 
 correct_answer = 0
 
@@ -31,6 +29,8 @@ for question, dados_question in question.items():
     for respostas, dados_respostas in dados_question['respostas'].items():
         print(f'{respostas}: {dados_respostas}')
 
+    print('=*' * 50 + '=*')
+
     resposta_usuario = input('Informe sua Resposta: ')
 
     if resposta_usuario == dados_question['resposta_certa']:
@@ -40,12 +40,11 @@ for question, dados_question in question.items():
 
     else:
         print('Infelizmente você é caçador de ranque baixo, treine mais e volte aqui')
-
-    print('=*'* 50 + '=*')
+    print('=*' * 50 + '=*')
 
     quantidade_perguntas = len(question)
     porcentagem_acertos = correct_answer / quantidade_perguntas * 100
     print(f'Você acertou {correct_answer} respostas.')
     print(f'Sua porcetagem de acerto foi {porcentagem_acertos}%.')
 
-print('=*'* 50 + '=*')
+    print('=*'* 50 + '=*')
